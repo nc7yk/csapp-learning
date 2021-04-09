@@ -490,7 +490,6 @@ IONEFG
 
 # phase6:
 
-汇编没太看懂 直接看了源码
 
 ```c
 .text:00000000004010F4 phase_6         proc near               ; CODE XREF: main+126↑p
