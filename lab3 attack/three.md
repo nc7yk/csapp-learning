@@ -313,7 +313,41 @@ c3
 
 gdb看一下
 
-![image-20210415175457388](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210415175457388.png)
+```
+ RAX  0x1
+ RBX  0x55586000 ◂— 0
+ RCX  0x4
+ RDX  0x7ffff7dd3790 (_IO_stdfile_0_lock) ◂— 0x0
+ RDI  0x7ffff7dd18e0 (_IO_2_1_stdin_) ◂— 0xfbad2288
+ RSI  0xa
+ R8   0x7ffff7fd8700 ◂— 0x7ffff7fd8700
+ R9   0x7ffff7fd8700 ◂— 0x7ffff7fd8700
+ R10  0x814
+ R11  0x246
+ R12  0x2
+ R13  0x0
+ R14  0x0
+ R15  0x0
+ RBP  0x55685fe8 —▸ 0x402fa5 ◂— push   0x3a6971 /* 'hqi:' */
+ RSP  0x5561dca8 ◂— 2
+ RIP  0x401976 (test+14) ◂— mov    edx, eax
+
+   0x401968 <test>       sub    rsp, 8
+   0x40196c <test+4>     mov    eax, 0
+   0x401971 <test+9>     call   getbuf <0x4017a8>
+ 
+ ► 0x401976 <test+14>    mov    edx, eax
+   0x401978 <test+16>    mov    esi, 0x403188
+   0x40197d <test+21>    mov    edi, 1
+   0x401982 <test+26>    mov    eax, 0
+   0x401987 <test+31>    call   __printf_chk@plt <0x400df0>
+ 
+   0x40198c <test+36>    add    rsp, 8
+   0x401990 <test+40>    ret    
+ 
+   0x401991              nop    
+
+```
 
 也就是
 
@@ -411,8 +445,6 @@ void __cdecl __noreturn touch2(unsigned int val)
 
 但我们这次不能直接通过代码注入的方式 而是要用相应的gadget 因为题目给出了大量的gadget
 
-![image-20210413232606117](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210413232606117.png)
-
 
 
 可以通过先将cookie传入rax然后 传入rdi
@@ -490,7 +522,7 @@ ec 17 40 00 00 00 00 00
 
 构造：
 
-![1433829-cafcf76d35ef7ba1](C:\Users\de'l'l\Desktop\pic\1433829-cafcf76d35ef7ba1.webp)
+![img](https://upload-images.jianshu.io/upload_images/1433829-cafcf76d35ef7ba1.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp)
 
 
 
