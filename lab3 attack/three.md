@@ -126,12 +126,12 @@ pushq $0x4017C0
 retq
 ```
 
+得到16进制机器码
+
 ```
 ➜  target1 git:(master) ✗ gcc -c code.s
 ➜  target1 git:(master) ✗ objdump -d code.o > code.d  
 ```
-
-得到16进制机器码
 
 ```
 
