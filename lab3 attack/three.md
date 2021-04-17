@@ -52,7 +52,7 @@ char *__fastcall Gets(char *dest)
 }
 ```
 
-存在缓冲区溢出 在只能读入0x28大小的栈内 使用了IO_gets可以读入不限制大小的数据
+存在缓冲区溢出 在只能读入0x28大小的栈内 使用了IO_getc可以读入不限制大小的数据
 
 ret2text 不多说了
 
