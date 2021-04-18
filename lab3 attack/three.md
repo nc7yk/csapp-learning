@@ -7,7 +7,7 @@ Linux binary with code-injection vulnerability.  To be used for phases
 
 这个lab的意思是 利用栈溢出等技术 将函数流劫持到相应的touch 并执行
 
-先将需要注入的代码写入`solutions/level.txt` 然后执行：
+先将需要注入的代码写入`solution/level.txt` 然后执行：
 
 ```
 ./hex2raw -i solution/level1.txt | ./ctarget -q
