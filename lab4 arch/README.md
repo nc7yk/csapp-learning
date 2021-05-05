@@ -26,11 +26,11 @@
 
 ### 指令对应的编码
 
-![image-20210501134227607](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501134227607.png)
+![image-20210501134227607](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501134227607.png)
 
-![image-20210501134501119](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501134501119.png)
+![image-20210501134501119](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501134501119.png)
 
-![image-20210501134541496](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501134541496.png)
+![image-20210501134541496](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501134541496.png)
 
 
 
@@ -48,7 +48,7 @@
 #TKINC=-isystem /usr/include/tcl8.5
 ```
 
-![image-20210501124238425](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501124238425.png)
+![image-20210501124238425](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501124238425.png)
 
 然后 : `make clean;make`
 
@@ -93,7 +93,7 @@ ele3:
 
 书上存在例题4.3
 
-![image-20210501103118758](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501103118758.png)
+![image-20210501103118758](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501103118758.png)
 
 参考写的exp:
 
@@ -319,13 +319,13 @@ stack:
 
 结果：
 
-![image-20210501153031801](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501153031801.png)
+![image-20210501153031801](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501153031801.png)
 
 
 
 ## part B:
 
-![image-20210501153601105](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210501153601105.png)
+![image-20210501153601105](http://nitw1t.top/wp-content/uploads/2021/05/image-20210501153601105-1024x200.png)
 
 这个部分是为处理器增加一个iaddq指令,参考课本的图4.18,很容易写出iaddq对应的各个阶段
 
@@ -359,7 +359,7 @@ PC <- valP
 
 但是在做之前先要修改下`./seq/Makefile`文件和安装一些需要的库
 
-![image-20210505233452111](C:\Users\de'l'l\AppData\Roaming\Typora\typora-user-images\image-20210505233452111.png)
+![image-20210505233452111](http://nitw1t.top/wp-content/uploads/2021/05/image-20210505233452111.png)
 
 ```
 ➜  seq git:(master) ✗ sudo apt-get install tcl tcl-dev tk tk-dev
@@ -605,7 +605,9 @@ word new_pc = [
 ];
 #/* $end seq-all-hcl */
 ```
+![image-20210506000451392](http://nitw1t.top/wp-content/uploads/2021/05/image-20210506000451392.png)
 
+成功
 
 
 
