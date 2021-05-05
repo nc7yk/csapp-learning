@@ -1,0 +1,41 @@
+.pos 0
+init: irmovq Stack,%rsp
+      call main
+      halt
+     
+     	.align 8	
+ele1:
+	.quad 0x00a
+	.quad ele2
+ele2:
+	.quad 0x0b0
+	.quad ele3
+ele3:
+	.quad 0xc00
+	.quad 0
+		
+main:
+	irmovq ele1,%rdi
+	call sum_list
+	ret
+
+sum_list:
+	xorq %rax,%rax
+	jmp test
+
+#rdi 链表头
+loop:
+	mrmovq 0(%rdi),%r10
+	#rdi 0偏移处的值 也就是链表头 赋给r10
+	addq %r10,%rax
+	mrmovq 8(%rdi),%r10
+	rrmovq %r10,%rdi
+	
+test:
+	andq %rdi,%rdi
+	jne loop
+	ret
+		
+	.pos 0x100
+Stack:
+		

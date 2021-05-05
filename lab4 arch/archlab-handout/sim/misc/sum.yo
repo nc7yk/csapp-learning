@@ -1,0 +1,41 @@
+0x000:                      | .pos 0
+0x000: 30f40001000000000000 | init: irmovq Stack,%rsp
+0x00a: 804800000000000000   |       call main
+0x013: 00                   |       halt
+                            |      
+0x018:                      |      	.align 8	
+0x018:                      | ele1:
+0x018: 0a00000000000000     | 	.quad 0x00a
+0x020: 2800000000000000     | 	.quad ele2
+0x028:                      | ele2:
+0x028: b000000000000000     | 	.quad 0x0b0
+0x030: 3800000000000000     | 	.quad ele3
+0x038:                      | ele3:
+0x038: 000c000000000000     | 	.quad 0xc00
+0x040: 0000000000000000     | 	.quad 0
+                            | 		
+0x048:                      | main:
+0x048: 30f71800000000000000 | 	irmovq ele1,%rdi
+0x052: 805c00000000000000   | 	call sum_list
+0x05b: 90                   | 	ret
+                            | 
+0x05c:                      | sum_list:
+0x05c: 6300                 | 	xorq %rax,%rax
+0x05e: 707f00000000000000   | 	jmp test
+                            | 
+                            | #rdi 链表头
+0x067:                      | loop:
+0x067: 50a70000000000000000 | 	mrmovq 0(%rdi),%r10
+                            | 	#rdi 0偏移处的值 也就是链表头 赋给r10
+0x071: 60a0                 | 	addq %r10,%rax
+0x073: 50a70800000000000000 | 	mrmovq 8(%rdi),%r10
+0x07d: 20a7                 | 	rrmovq %r10,%rdi
+                            | 	
+0x07f:                      | test:
+0x07f: 6277                 | 	andq %rdi,%rdi
+0x081: 746700000000000000   | 	jne loop
+0x08a: 90                   | 	ret
+                            | 		
+0x100:                      | 	.pos 0x100
+0x100:                      | Stack:
+                            | 		
